@@ -1,14 +1,52 @@
-import {Animals, Cars} from './classes/animals.js'
-import Helper from './classes/helper.js'
+import BookList from './classes/BookList.js'
+import Book from './classes/Book.js'
 
-const car = new Cars('Škoda', 'Fabia') //Instance (Instancija)
+const bookList = new BookList(10)
 
-console.log(Helper.multiplyer(20, 30))
+// new Book()
 
-car.setParam('Mazda')
+// console.log(Book.getCount())
 
-console.log(car.param3)
+// //Perskaiciau
+console.log(bookList.markRead())
+console.log(bookList.markRead())
 
-console.log(Animals.grupe)
+// //Isfiltruota pagal puslapiu kieki
+// //console.log(bookList.filterPages())
 
-console.log(car.returnLine('Nuostabus automobilis'))
+// //Istriname daugiau puslapiu kieki turincia knyga
+console.log(bookList.deleteBook())
+console.log(bookList.deleteBook())
+console.log(bookList.deleteBook())
+
+// console.log(bookList.list.length)
+
+//Map
+
+// const map = new Map()
+
+// map.set('indeksas', 10) //Priskiriamas elementas su reiksme 10
+
+// console.log(map.get('indeksas')) // Grazinama 10
+
+// console.log(map.size) //Grazinamas objekto ilgis
+
+// console.log(map.delete('indeksas'))
+
+//console.log(Book.perskaitytos_knygos)
+
+if(bookList.checkRead(bookList.list[5].id)) {
+    console.log('Knyga yra perskaityta')
+} else {
+    console.log('Knyga yra neperskaityta')
+}
+
+//console.log(bookList.list.length)
+
+//console.log(BookList.bookCount())
+
+bookList.fillGaps(10)
+
+console.log(bookList.list)
+
+console.log(BookList.bookCount())
